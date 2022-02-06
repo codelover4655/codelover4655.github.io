@@ -266,6 +266,11 @@ class Tutorregisterform extends React.Component {
             let yoyo=response.json();
             yoyo.then((data) => {
                 console.log(data);
+                for (const key in data) {
+
+                    console.log(` ${data[key]}`);
+                    alert(data[key]);
+                }
             })
 
         }
@@ -274,6 +279,8 @@ class Tutorregisterform extends React.Component {
             let yoyo=response.json();
             yoyo.then((data) => {
                 console.log(data);
+                localStorage.setItem('tutortoken',data.Token);
+                window.location="/tutordashboard";
            
                 
                

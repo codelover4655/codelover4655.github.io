@@ -85,20 +85,24 @@ class Homepage extends React.Component
             window.location="/";
         }
         return(
-            <div>
+            <div className="maindiv">
+            
+            
+  
+
            <header>
-            <button onClick={()=> this.handlelogout()}>LOGOUT</button>
-            <h3>
+           
+            <div className="navbar">
+            <button onClick={()=> this.handlelogout()}  className="butstyle" >LOGOUT</button>
+            <Link to="/Mappage">change location </Link>
+            </div>
+           </header>
+         
+        
+
+           <h3>
                you are searching tutors in {localStorage.getItem('add')}
            </h3>
-         
-            <Link
-            style={{ display: "block-inline", margin: "auto",border: "1px solid blue",color: "black",background: "grey"}}
-            to="/Mappage" >
-          change location
-          </Link>
-           </header>
-           <h1>HELLO WORLD</h1>
        
             <Maincontent  />
     

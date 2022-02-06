@@ -20,7 +20,7 @@ class Mapopup extends React.Component {
             <p >Name: {this.props.obj.matutor}</p>
             <p>ADDRESS: {this.props.obj.address}</p>
             <p> ABOUT ME:{this.props.obj.aboutyou}</p>
-            <p> RATING: {this.props.obj.rating}</p>
+            <p> RATING: {parseInt(this.props.obj.rating)}</p>
             <p> DISTANCE : {parseInt(this.props.obj.distance)}KM</p>
             <Link to={`/teacher/${this.props.obj.id}`}>PROFILE</Link>
             </div>
@@ -118,7 +118,7 @@ return("yoyo");
             <>
             <div>
              <input type="range" min="10" max="1000"  className="slider" id="myRange" onChange={(e)=>this.handlechange(e)} /> { } <h3>value:{this.state.range}</h3>
-            <ol > {List} </ol> 
+            <ol style={{overflow: "scroll"}} > {List} </ol> 
             
             </div>
             </>

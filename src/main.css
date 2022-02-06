@@ -4,8 +4,16 @@
     display: inline-block;
     margin:10px;
     border: 2px solid black;
+    border-radius: 25px;
+    background: url(https://i.pinimg.com/736x/8d/9f/fe/8d9ffe7c05ba5ef3968263bd8f3d2ff0.jpg);
+  background-position: left top;
+  background-repeat: repeat;
 
     
+}
+.div{
+    background: antiquewhite;
+    background-image: url(https://media.istockphoto.com/photos/modern-beige-painted-wall-background-texture-picture-id926312000)
 }
 
 .btn btn-primary
@@ -13,17 +21,34 @@
       background-color: blue;
 }
 
+.butstyle{
+    display: flex;
+    margin-right: 15px;
+    font-family: cursive;
+}
 .tutormain{
     display: block;
-    border: 2px solid gold;
+    background-image: url(https://media.istockphoto.com/photos/modern-beige-painted-wall-background-texture-picture-id926312000);
     text-align: center;
     margin: auto ;
     padding: 10px;
+    border: 3px solid #c2c2b3;
+    
+    
 
+}
+.navbar{
+    background: black;
+    opacity: .9;
+    display: flex;
+    padding: 10px;
+    position:sticky
+    ;
 }
 
 .tutorlist{
     display: inline ;
+    overflow-y: scroll;
 }
 .Mappopup{
     text-align: center;

@@ -139,7 +139,7 @@ constructor(props){
                     <h2>qualifications:{this.state.data.aboutyou}</h2>
                     <h2>ADDRESS :{this.state.data.address} </h2>
                     <h2>PHONE: {this.state.data.contact_no}</h2>
-                    <h2>CURRENT RATING: {this.state.data.rating}</h2>
+                    <h2>CURRENT RATING: {parseInt(this.state.data.rating)}</h2>
                     <h2>RATE USER: <input type="number"  onChange={(e)=>this.handlechange(e)} min="1" max="10"/> <button onClick={()=>this.handlerating()}>SUBMIT NEW RATING</button> Refresh To see rating changes </h2>
                 
                     <div>
