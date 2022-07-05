@@ -13,11 +13,11 @@ class Mapopup extends React.Component {
 
     render() {
 
-        const url=this.props.obj.img==="http://127.0.0.1:8000/media/SOME%20STRING" ? "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png": this.props.obj.img
+        const url= this.props.obj.img
         return (
             <div className="mapopup">
             <img src={url} alt=" jacket" width="100" height="100"/>
-            <p >Name: {this.props.obj.matutor}</p>
+            <h3>Name: {this.props.obj.matutor}</h3>
             <p>ADDRESS: {this.props.obj.address}</p>
             <p> ABOUT ME:{this.props.obj.aboutyou}</p>
             <p> RATING: {parseInt(this.props.obj.rating)}</p>
@@ -58,7 +58,7 @@ class Matutorlist extends React.Component {
             y1:localStorage.getItem("longitude"),
         
         };
-        const response = await fetch('http://127.0.0.1:8000/matutor/list',{
+        const response = await fetch('https://my-tutor-india.herokuapp.com/matutor/list',{
             method: "POST",
             headers: {
                'Content-Type': 'application/json',

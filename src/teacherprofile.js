@@ -31,7 +31,7 @@ constructor(props){
      let   param=this.props.id;
      let token=localStorage.getItem("token");
 
-      const userprofile=await fetch(`http://127.0.0.1:8000/matutor/userpro/${param}/`,{
+      const userprofile=await fetch(`https://my-tutor-india.herokuapp.com/matutor/userpro/${param}/`,{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ constructor(props){
       alert("you are rating this tutor"+rating+"points");
         const token = localStorage.getItem("token");
         const data={'userid':localStorage.getItem('userid'),'tutorid':this.props.id,'rating':this.state.rating};
-       const response = await fetch("http://127.0.0.1:8000/matutor/rateuser",{
+       const response = await fetch("https://my-tutor-india.herokuapp.com/matutor/rateuser",{
            method: "POST",
            headers: {
               'Content-Type': 'application/json',

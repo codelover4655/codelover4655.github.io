@@ -13,7 +13,7 @@ import Button from 'react-bootstrap/Button';
 class GoogleSocialAuth extends React.Component {
   async takeid(token){
     const data={'token': token};
-     const response = await fetch("http://127.0.0.1:8000/check/giveid/",{
+     const response = await fetch("  https://my-tutor-india.herokuapp.com/check/giveid/",{
          method: "POST",
          headers: {
             'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ class GoogleSocialAuth extends React.Component {
 
    async handlelogin(accessToken,tokenId) {
       const data={'access_token': accessToken, 'id_token': tokenId};
-     const response = await fetch("http://127.0.0.1:8000/check/social-login/google/",{
+     const response = await fetch("  https://my-tutor-india.herokuapp.com/check/social-login/google/",{
          method: "POST",
          headers: {
             'Content-Type': 'application/json'
@@ -107,10 +107,8 @@ class LOGIN extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
         username:'',
         password:'',
-     
         }
     }
 
@@ -124,7 +122,7 @@ class LOGIN extends React.Component {
    
     async handle(){
         const data={username: this.state.username,password: this.state.password};
-       const response = await fetch("http://127.0.0.1:8000/check/login/",{
+       const response = await fetch("  https://my-tutor-india.herokuapp.com/check/login/",{
            method: "POST",
            headers: {
               'Content-Type': 'application/json'
@@ -156,19 +154,21 @@ class LOGIN extends React.Component {
         }
    
     render(){
-     
+      // where the game begins
         return(
             <>
        
                 <div className="login">
-                <h3>LOGIN</h3>
+                
                     <form>
+                    <h3>LOGIN</h3>
                     <div className="us1">
                         <input type="text" onChange={(e) => this.f1(e)}  placeholder="username"/></div>
                        <div className="us2"> <input type="password" onChange={(e) => this.f2(e)}placeholder="password" /></div>
                       
                        <div className="us3"> <button type="button" onClick={() => this.handle()} >SUBMIT </button></div>
                     </form>
+                    
                     <GoogleSocialAuth/>
                     <div className="butoontutor">
                     <Link

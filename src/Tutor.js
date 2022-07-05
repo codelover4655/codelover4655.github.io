@@ -65,7 +65,7 @@ class Homepage extends React.Component
 
      var token=localStorage.getItem('token');
     
-    const logout=await fetch('http://127.0.0.1:8000/check/logout/',{
+    const logout=await fetch('  https://my-tutor-india.herokuapp.com/check/logout/',{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -77,7 +77,6 @@ class Homepage extends React.Component
     alert('logoutsuccessfully');
     localStorage.removeItem('token');
     localStorage.removeItem('userid');
-
     window.location = "/";
   }
     render(){

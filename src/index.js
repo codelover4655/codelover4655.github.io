@@ -4,9 +4,6 @@ import LOGIN from "./login";
 import Map from "./map"
 import TutorLogin from "./tutorportal"
 import Tutordashboard from "./tutordashboard"
-
-
-
 import Giveid from  "./teacherprofile";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 

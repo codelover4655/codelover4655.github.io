@@ -109,7 +109,7 @@ class TutorLoginform extends React.Component {
    
     async handle(){
         const data={username: this.state.username,password: this.state.password};
-       const response = await fetch("http://127.0.0.1:8000/matutor/login",{
+       const response = await fetch("  https://my-tutor-india.herokuapp.com/ matutor/login",{
            method: "POST",
            headers: {
               'Content-Type': 'application/json'
@@ -231,6 +231,7 @@ class Tutorregisterform extends React.Component {
         });
     }
      async handlesubmit(e){
+         
    e.preventDefault();
         let form_data = new FormData();
         form_data.append('img', this.state.img,this.state.img.name);
@@ -246,11 +247,10 @@ class Tutorregisterform extends React.Component {
         form_data.append('longi',this.state.longitude);
         form_data.append('address',this.state.address);
         form_data.append('istutor',this.state.istutor);
-        const response = await fetch("http://127.0.0.1:8000/matutor/register",{
+        const response = await fetch("  https://my-tutor-india.herokuapp.com/matutor/register",{
             method: "POST",
             headers: {
                // 'Content-Type':"multipart/form-data",
-
              },
              mode: 'cors',
              body: form_data

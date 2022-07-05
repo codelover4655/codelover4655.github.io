@@ -70,7 +70,7 @@ class Tutordashboard extends React.Component {
         form_data.append('img', e.target.files[0],e.target.files[0].name);
         form_data.append('id', this.state.id);
         form_data.append('feild','img');
-        const response = await fetch("http://127.0.0.1:8000/matutor/imageupdate",{
+        const response = await fetch("https://my-tutor-india.herokuapp.com/matutor/imageupdate",{
             method: "PUT",
             headers: {
                // 'Content-Type':"multipart/form-data",
@@ -110,7 +110,7 @@ class Tutordashboard extends React.Component {
     async handle(subject){
         const data={sub:subject};
         let token=localStorage.getItem("tutortoken")
-       const response = await fetch("http://127.0.0.1:8000/matutor/dashboard",{
+       const response = await fetch("  https://my-tutor-india.herokuapp.com/matutor/dashboard",{
            method: "POST",
            headers: {
               'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ class Tutordashboard extends React.Component {
         async handleupdate(feild,value){
             const token = localStorage.getItem("tutortoken");
             const data={'feild':feild,'value':value,'id':this.state.id};
-           const response = await fetch("http://127.0.0.1:8000/matutor/dashboard",{
+           const response = await fetch("https://my-tutor-india.herokuapp.com/matutor/dashboard",{
                method: "PUT",
                headers: {
                   'Content-Type': 'application/json',
@@ -279,7 +279,7 @@ class Tutordashboard extends React.Component {
         async handlelogout(){
             var token=localStorage.getItem('tutortoken');
     
-            const logout=await fetch('http://127.0.0.1:8000/check/logout/',{
+            const logout=await fetch('https://my-tutor-india.herokuapp.com/check/logout/',{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

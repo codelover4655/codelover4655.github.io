@@ -10,7 +10,8 @@ import Geocoder from "react-map-gl-geocoder";
 const MAPBOX_TOKEN  = 'pk.eyJ1IjoiY29kZWxvdmVyNDY1NSIsImEiOiJja3l3dXZ1bmswYzY4MnFxaWZuMzB6bzJ2In0.fc8OZYG7p6jsuXHo5domPA'
 
 
-class Map extends React.Component{
+class Map extends React.Component
+{
 
  async giveadd(lat,long){
   
@@ -31,6 +32,7 @@ yoyo.then((data) => {
   localStorage.setItem('add',data.features[0].place_name);
   window.location="/Homepage";
   });
+  
     }
 }
 
